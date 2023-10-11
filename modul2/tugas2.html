@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Pendaftaran</title>
+
+    <style>
+        body {
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Form Pendaftaran</h1>
+        <form onsubmit="return validateForm()">
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="alamat" class="form-label">Alamat</label>
+                <input type="text" class="form-control" id="alamat" required>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+            <button onclick="validateForm()" class="btn-btn-primary">Submit</button>
+
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var nama = document.getElementById('nama').value;
+            var email = document.getElementById('email').value;
+            var alamat = document.getElementById('alamat').value;
+
+            if ('!nama || !email || !alamat') {
+                alert('Semua kolom harus diisi.');
+                return false;
+            } else{
+                var hasil = nama, email, alamat;
+                alert('data sudah diisi semua.');
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
